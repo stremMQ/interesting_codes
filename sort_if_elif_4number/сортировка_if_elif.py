@@ -1,10 +1,13 @@
 a = int(input())
+
 b = a % 10
 c = a % 100 // 10
 d = a % 1000 // 100
 f = a % 10000 // 1000
+
 max,min,mins,maxs = 0,0,0,0
 indexmin,indexmax = '', ''
+
 if b >= c and b >= d and b >= f:
     max = b
     indexmax = "b"
@@ -17,10 +20,12 @@ elif d >= c and d >= b and d >= f:
 elif f >= b and f >= c and f >= d:
     max = f
     indexmax = "f"
+    
 if b == 0: b = 1000
 if c == 0: c = 1000
 if d == 0: d = 1000
 if f == 0: f == 1000
+    
 if c <= d and c <= f and c <= b:
     min = c
     indexmin = "c"
@@ -33,10 +38,12 @@ elif d <= c and d <= b and d <= f:
 elif f <= c and f <= b and f <= d:
     min = f
     indexmin = "f"
+    
 if b == 1000: b = 0
 if c == 1000: c = 0
 if d == 1000: d = 0
 if f == 1000: f == 0
+    
 if indexmin == "b":
     if indexmax == "c":
         if d >= f:
@@ -125,4 +132,5 @@ if indexmin ==  "f":
         else:
             maxs = c
             mins = d
+            
 print(min,mins,maxs,max)
