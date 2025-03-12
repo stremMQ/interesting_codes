@@ -1,5 +1,6 @@
 from random import shuffle
 import time
+
 start_time = time.time()
 number = list((input("Введите число для сортировки: ")))
 sort_number = ''
